@@ -1,7 +1,8 @@
 package com.itacademy.testngexample;
 
-import org.apache.log4j.LogManager;
-import org.apache.log4j.Logger;
+
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.testng.annotations.Test;
 
 public class LoggerTest {
@@ -11,6 +12,7 @@ public class LoggerTest {
     public void loggerTest(){
         LOGGER.debug("debug");
         LOGGER.info("info");
+        LOGGER.error("error");
 
     }
 }
