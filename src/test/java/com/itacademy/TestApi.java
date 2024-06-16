@@ -1,9 +1,10 @@
 package com.itacademy;
 
 import com.itacademy.testngexample.LoggerTest;
-import org.apache.log4j.LogManager;
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
-public class testOnSeleniumApi {
+
+public class TestApi {
     private static final Logger LOGGER = LogManager.getLogger(LoggerTest.class);
 }
