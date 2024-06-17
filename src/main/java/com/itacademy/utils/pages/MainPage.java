@@ -10,10 +10,6 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 
-
-
-
-
 public class MainPage {
     private WebDriver driver;
     private JavascriptExecutor js;
@@ -38,11 +34,22 @@ public class MainPage {
     private WebElement getTextWtRiSe;
     @FindBy(xpath = "//button[@aria-label=\"Close dialog 3\"]")
     private WebElement closeDialogButton;
-    @FindBy(xpath="//button[@id=\"AddToCart\"]")
+    @FindBy(xpath = "//button[@id=\"AddToCart\"]")
     private WebElement buttonToBasket;
     @FindBy(xpath = "//a[text()=\"Workout Rings Set\"]")
     private WebElement productRingSet;
-
+    @FindBy(xpath = "//*[@class=\"header__icon-wrapper tap-area hidden-pocket hidden-lap \"]")
+    private WebElement buttonSearch;
+    @FindBy(xpath = "//input[@aria-label=\"Search\"]")
+    private WebElement search;
+    @FindBy(xpath = "//span[@class=\"product-item-meta__title text--small\"]")
+    private WebElement buttonProduct;
+    @FindBy(xpath = "//h1[text()=\"Premium Dip Bars\"]")
+    private WebElement productDipBars;
+    @FindBy(xpath = "//a[@aria-label=\"Decrease quantity\"]")
+    private WebElement deleteProduct;
+    @FindBy(xpath = "//p[text()=\"Your cart is empty\"]")
+    private WebElement textEmptyBasket;
 
     private String url = "https://www.gornation.com/";
 
@@ -117,12 +124,40 @@ public class MainPage {
 
     }
 
-    public void clickButtonAddToBasket(){
+    public void clickButtonAddToBasket() {
         Waiters.clickWebElement(buttonToBasket, driver);
         buttonToBasket.click();
     }
 
-    public String getTextOneProductToBasket(){
+    public String getTextOneProductToBasket() {
         return productRingSet.getText();
     }
+
+    public void clickButtonToSearch() {
+        Waiters.clickWebElement(buttonSearch, driver);
+        buttonSearch.click();
+    }
+
+    public void typeSearchInputField(String text) {
+        search.sendKeys(text);
+    }
+
+    public void clickButtonProduct(){
+        Waiters.clickWebElement(buttonProduct, driver);
+        buttonProduct.click();
+    }
+
+    public String getTextProductPremiumDipBars(){
+        return productDipBars.getText();
+    }
+
+    public void clickButtonDeleteProduct(){
+        Waiters.clickWebElement(deleteProduct, driver);
+        deleteProduct.click();
+    }
+
+    public String getTextEmptyBasket(){
+        return textEmptyBasket.getText();
+    }
+
 }
