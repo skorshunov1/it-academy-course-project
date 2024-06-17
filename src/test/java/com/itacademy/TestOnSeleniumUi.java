@@ -45,4 +45,37 @@ public class TestOnSeleniumUi extends BaseTest {
         Assert.assertEquals(str,str2,"Workout Rings Set");
         LOGGER.info("info");
     }
+
+
+    @Test
+    public void thirdTest() throws InterruptedException {
+        MainPage mainPage = new MainPage(driver);
+        mainPage.openUrl();
+        mainPage.clickButtonCloseDialog();
+        Thread.sleep(5000);
+        mainPage.clickButtonToSearch();
+        mainPage.typeSearchInputField("Dip bars");
+        mainPage.clickButtonProduct();
+        String str = mainPage.getTextProductPremiumDipBars();
+        Assert.assertEquals(str,"Premium Dip Bars");
+        LOGGER.info("info");
+    }
+
+    @Test
+    public void fourTest() throws InterruptedException {
+        MainPage mainPage = new MainPage(driver);
+        mainPage.openUrl();
+        mainPage.clickButtonCloseDialog();
+        mainPage.clickButtonEquipment();
+        mainPage.scrollPage();
+        Thread.sleep(5000);
+        mainPage.clickButtonRingsSet();
+        mainPage.clickButtonAddToBasket();
+        mainPage.clickButtonDeleteProduct();
+        String str = mainPage.getTextEmptyBasket();
+        Assert.assertEquals(str,"Your cart is empty");
+        LOGGER.info("info");
+
+
+    }
 }
