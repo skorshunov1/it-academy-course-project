@@ -119,6 +119,7 @@ public class MainPage {
         if (closeDialogButton.isDisplayed()) {
             closeDialogButton.click();
         } else {
+            System.out.println("Display is not");
 
         }
 
