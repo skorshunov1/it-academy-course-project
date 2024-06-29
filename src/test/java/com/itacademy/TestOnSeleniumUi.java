@@ -1,17 +1,17 @@
 package com.itacademy;
 
-import com.itacademy.testngexample.LoggerTest;
 import com.itacademy.utils.pages.MainPage;
 
-
+import com.itacademy.utils.pages.listeners.TestListeners;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.testng.Assert;
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
-
+@Listeners(TestListeners.class)
 public class TestOnSeleniumUi extends BaseTest {
-    private static final Logger LOGGER = LogManager.getLogger(LoggerTest.class);
+    private static final Logger LOGGER = LogManager.getLogger(TestOnSeleniumUi.class);
 
 
     @Test
@@ -27,7 +27,6 @@ public class TestOnSeleniumUi extends BaseTest {
         Thread.sleep(10000);
         String string = mainPage.getIsErrorPresent();
         Assert.assertEquals(mainPage.getIsErrorPresent(), "Sent to st.korshunov88@gmail.com");
-        LOGGER.info("info");
     }
 
     @Test
@@ -42,8 +41,7 @@ public class TestOnSeleniumUi extends BaseTest {
         mainPage.clickButtonRingsSet();
         mainPage.clickButtonAddToBasket();
         String str2 = mainPage.getTextOneProductToBasket();
-        Assert.assertEquals(str,str2,"Workout Rings Set");
-        LOGGER.info("info");
+        Assert.assertEquals(str, str2, "Workout Rings Set");
     }
 
 
@@ -57,8 +55,7 @@ public class TestOnSeleniumUi extends BaseTest {
         mainPage.typeSearchInputField("Dip bars");
         mainPage.clickButtonProduct();
         String str = mainPage.getTextProductPremiumDipBars();
-        Assert.assertEquals(str,"Premium Dip Bars");
-        LOGGER.info("info");
+        Assert.assertEquals(str, "Premium Dip Bars");
     }
 
     @Test
@@ -73,9 +70,6 @@ public class TestOnSeleniumUi extends BaseTest {
         mainPage.clickButtonAddToBasket();
         mainPage.clickButtonDeleteProduct();
         String str = mainPage.getTextEmptyBasket();
-        Assert.assertEquals(str,"Your cart is empty");
-        LOGGER.info("info");
-
-
+        Assert.assertEquals(str, "Your cart is empty");
     }
 }
