@@ -2,6 +2,8 @@ package com.itacademy.utils.pages;
 
 import com.itacademy.utils.pages.waiters.Waiters;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -11,8 +13,9 @@ import org.openqa.selenium.support.PageFactory;
 
 
 public class MainPage {
+    private static final Logger LOGGER = LogManager.getLogger(MainPage.class);
+
     private WebDriver driver;
-    private JavascriptExecutor js;
 
     @FindBy(xpath = "//a[@aria-label=\"Login\"]")
     private WebElement account;
@@ -69,10 +72,6 @@ public class MainPage {
     }
 
     public void typeLogin(String text) {
-       /* int length = 7;
-        boolean useLetters = true;
-        boolean useNumbers = false;
-        String generatedString = RandomStringUtils.random(length, useLetters, useNumbers);*/
         login.sendKeys(text);
     }
 
@@ -119,7 +118,7 @@ public class MainPage {
         if (closeDialogButton.isDisplayed()) {
             closeDialogButton.click();
         } else {
-            System.out.println("Display is not");
+            LOGGER.info("Display is not");
 
         }
 
