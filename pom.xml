@@ -89,7 +89,7 @@
         <configuration>
           <suiteXmlFiles>
             <!--suppress UnresolvedMavenProperty -->
-            <suiteXmlFile>src/test/resources/testng/testngUI.xml</suiteXmlFile>
+            <suiteXmlFile>src/test/resources/testng/${suite}.xml</suiteXmlFile>
           </suiteXmlFiles>
         </configuration>
       </plugin>
