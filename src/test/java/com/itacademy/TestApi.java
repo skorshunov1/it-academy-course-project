@@ -1,23 +1,19 @@
 package com.itacademy;
 
-
 import static io.restassured.RestAssured.given;
-import static io.restassured.RestAssured.when;
 
-import io.restassured.response.Response;
-import io.restassured.module.jsv.JsonSchemaValidator;
-
-import com.itacademy.testngexample.LoggerTest;
+import com.itacademy.utils.pages.listeners.TestListeners;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
-import java.awt.*;
+
 import java.io.File;
 
-
+@Listeners(TestListeners.class)
 public class TestApi {
-    private static final Logger LOGGER = LogManager.getLogger(LoggerTest.class);
+    private static final Logger LOGGER = LogManager.getLogger(TestApi.class);
 
 
     @Test
