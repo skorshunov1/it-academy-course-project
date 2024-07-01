@@ -41,7 +41,7 @@ public class TestOnSeleniumUi extends BaseTest {
         mainPage.clickButtonRingsSet();
         mainPage.clickButtonAddToBasket();
         String str2 = mainPage.getTextOneProductToBasket();
-        Assert.assertEquals(str, str2, "Workout Rings Set");
+        Assert.assertEquals(str, str2,"Workout Rings Set");
     }
 
 
