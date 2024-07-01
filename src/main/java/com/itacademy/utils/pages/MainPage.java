@@ -40,7 +40,7 @@ public class MainPage {
     @FindBy(xpath = "//button[@id=\"AddToCart\"]")
     private WebElement buttonToBasket;
     @FindBy(xpath = "//a[text()=\"Workout Rings Set\"]")
-    private WebElement productRingSet;
+    private WebElement getTextproductRingSet;
     @FindBy(xpath = "//*[@class=\"header__icon-wrapper tap-area hidden-pocket hidden-lap \"]")
     private WebElement buttonSearch;
     @FindBy(xpath = "//input[@aria-label=\"Search\"]")
@@ -130,7 +130,7 @@ public class MainPage {
     }
 
     public String getTextOneProductToBasket() {
-        return productRingSet.getText();
+        return getTextproductRingSet.getText();
     }
 
     public void clickButtonToSearch() {
