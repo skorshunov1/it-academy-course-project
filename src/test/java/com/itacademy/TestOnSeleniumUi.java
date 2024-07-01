@@ -25,7 +25,6 @@ public class TestOnSeleniumUi extends BaseTest {
         mainPage.typeCodeInputField("564895");
         Thread.sleep(10000);
         mainPage.clickButtonSubmit();
-        Thread.sleep(10000);
         String string = mainPage.getIsErrorPresent();
         Assert.assertEquals(mainPage.getIsErrorPresent(), "Sent to st.korshunov88@gmail.com");
     }
