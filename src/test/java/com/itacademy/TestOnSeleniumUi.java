@@ -60,13 +60,12 @@ public class TestOnSeleniumUi extends BaseTest {
     }
 
     @Test
-    public void fourTest() throws InterruptedException {
+    public void fourTest()  {
         MainPage mainPage = new MainPage(driver);
         mainPage.openUrl();
         mainPage.clickButtonCloseDialog();
         mainPage.clickButtonEquipment();
         mainPage.scrollPage();
-        Thread.sleep(5000);
         mainPage.clickButtonRingsSet();
         mainPage.clickButtonAddToBasket();
         mainPage.clickButtonDeleteProduct();
