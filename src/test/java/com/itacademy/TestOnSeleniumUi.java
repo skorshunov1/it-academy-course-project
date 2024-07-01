@@ -18,6 +18,7 @@ public class TestOnSeleniumUi extends BaseTest {
     public void firstTest() throws InterruptedException {
         MainPage mainPage = new MainPage(driver);
         mainPage.openUrl();
+        mainPage.clickButtonCloseDialog();
         mainPage.clickAccountButton();
         mainPage.typeLogin("st.korshunov88@gmail.com");
         mainPage.clickButtonContinue();
