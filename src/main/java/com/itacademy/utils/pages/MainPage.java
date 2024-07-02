@@ -1,5 +1,6 @@
 package com.itacademy.utils.pages;
 
+import com.itacademy.utils.pages.utils.ScreenshotUtils;
 import com.itacademy.utils.pages.waiters.Waiters;
 
 import org.apache.logging.log4j.LogManager;
@@ -73,6 +74,7 @@ public class MainPage {
 
     public void typeLogin(String text) {
         login.sendKeys(text);
+        ScreenshotUtils.saveScreenshot(driver);
     }
 
     public void clickButtonContinue() {
@@ -83,6 +85,7 @@ public class MainPage {
     public void typeCodeInputField(String text) {
         Waiters.clickWebElement(code, driver);
         code.sendKeys(text);
+        ScreenshotUtils.saveScreenshot(driver);
     }
 
     public void clickButtonSubmit() {
@@ -140,6 +143,7 @@ public class MainPage {
 
     public void typeSearchInputField(String text) {
         search.sendKeys(text);
+        ScreenshotUtils.saveScreenshot(driver);
     }
 
     public void clickButtonProduct(){
