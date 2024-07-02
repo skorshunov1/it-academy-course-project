@@ -1,4 +1,4 @@
-package com.itacademy.utils;
+package com.itacademy.utils.pages.utils;
 
 import io.qameta.allure.Attachment;
 import org.openqa.selenium.OutputType;
