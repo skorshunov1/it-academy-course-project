@@ -6,10 +6,9 @@ import com.itacademy.utils.pages.listeners.TestListeners;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.testng.Assert;
-import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
-@Listeners(TestListeners.class)
+
 public class TestOnSeleniumUi extends BaseTest {
     private static final Logger LOGGER = LogManager.getLogger(TestOnSeleniumUi.class);
 
