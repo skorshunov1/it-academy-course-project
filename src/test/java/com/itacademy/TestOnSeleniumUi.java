@@ -1,8 +1,10 @@
 package com.itacademy;
 
-import com.itacademy.utils.pages.MainPage;
+import com.itacademy.utils.pages.pages.LoginPage;
+import com.itacademy.utils.pages.pages.MainPage;
 
-import com.itacademy.utils.pages.listeners.TestListeners;
+import com.itacademy.utils.pages.pages.ProductPage;
+import com.itacademy.utils.pages.pages.SearchPage;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.testng.Assert;
@@ -18,56 +20,58 @@ public class TestOnSeleniumUi extends BaseTest {
         MainPage mainPage = new MainPage(driver);
         mainPage.openUrl();
         mainPage.clickButtonCloseDialog();
-        mainPage.clickAccountButton();
-        mainPage.typeLogin("st.korshunov88@gmail.com");
-        mainPage.clickButtonContinue();
-        mainPage.typeCodeInputField("564895");
+        LoginPage loginPage = new LoginPage(driver);
+        loginPage.clickAccountButton();
+        loginPage.typeLogin("st.korshunov88@gmail.com");
+        loginPage.clickButtonContinue();
+        loginPage.typeCodeInputField("564895");
         Thread.sleep(10000);
-        mainPage.clickButtonSubmit();
-        String string = mainPage.getIsErrorPresent();
-        Assert.assertEquals(mainPage.getIsErrorPresent(), "Sent to st.korshunov88@gmail.com");
+        loginPage.clickButtonSubmit();
+        String string = loginPage.getIsErrorPresent();
+        Assert.assertEquals(loginPage.getIsErrorPresent(), "Sent to st.korshunov88@gmail.com");
     }
 
     @Test
-    public void secondTest() throws InterruptedException {
+    public void secondTest() {
         MainPage mainPage = new MainPage(driver);
         mainPage.openUrl();
         mainPage.clickButtonCloseDialog();
-        mainPage.clickButtonEquipment();
-        mainPage.scrollPage();
-        String str = mainPage.getTextWtRiSeT();
-        Thread.sleep(5000);
-        mainPage.clickButtonRingsSet();
-        mainPage.clickButtonAddToBasket();
-        String str2 = mainPage.getTextOneProductToBasket();
-        Assert.assertEquals(str, str2,"Workout Rings Set");
+        ProductPage productPage = new ProductPage(driver);
+        productPage.clickButtonEquipment();
+        productPage.scrollPage();
+        String str = productPage.getTextWtRiSeT();
+        productPage.clickButtonRingsSet();
+        productPage.clickButtonAddToBasket();
+        String str2 = productPage.getTextOneProductToBasket();
+        Assert.assertEquals(str, str2, "Workout Rings Set");
     }
 
 
     @Test
-    public void thirdTest() throws InterruptedException {
+    public void thirdTest() {
         MainPage mainPage = new MainPage(driver);
         mainPage.openUrl();
         mainPage.clickButtonCloseDialog();
-        Thread.sleep(5000);
-        mainPage.clickButtonToSearch();
-        mainPage.typeSearchInputField("Dip bars");
-        mainPage.clickButtonProduct();
-        String str = mainPage.getTextProductPremiumDipBars();
+        SearchPage searchPage = new SearchPage(driver);
+        searchPage.clickButtonToSearch();
+        searchPage.typeSearchInputField("Dip bars");
+        searchPage.clickButtonProduct();
+        String str = searchPage.getTextProductPremiumDipBars();
         Assert.assertEquals(str, "Premium Dip Bars");
     }
 
     @Test
-    public void fourTest()  {
+    public void fourTest() {
         MainPage mainPage = new MainPage(driver);
         mainPage.openUrl();
         mainPage.clickButtonCloseDialog();
-        mainPage.clickButtonEquipment();
-        mainPage.scrollPage();
-        mainPage.clickButtonRingsSet();
-        mainPage.clickButtonAddToBasket();
-        mainPage.clickButtonDeleteProduct();
-        String str = mainPage.getTextEmptyBasket();
+        ProductPage productPage = new ProductPage(driver);
+        productPage.clickButtonEquipment();
+        productPage.scrollPage();
+        productPage.clickButtonRingsSet();
+        productPage.clickButtonAddToBasket();
+        productPage.clickButtonDeleteProduct();
+        String str = productPage.getTextEmptyBasket();
         Assert.assertEquals(str, "Your cart is empty");
     }
 }
