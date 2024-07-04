@@ -1,6 +1,6 @@
-package com.itacademy;
+package tests;
 
-import com.itacademy.utils.pages.listeners.TestListeners;
+import com.itacademy.listeners.TestListeners;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 

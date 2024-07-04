@@ -1,10 +1,10 @@
-package com.itacademy;
+package tests;
 
-import com.itacademy.utils.pages.pages.LoginPage;
-import com.itacademy.utils.pages.pages.MainPage;
+import com.itacademy.pages.LoginPage;
+import com.itacademy.pages.MainPage;
 
-import com.itacademy.utils.pages.pages.ProductPage;
-import com.itacademy.utils.pages.pages.SearchPage;
+import com.itacademy.pages.ProductPage;
+import com.itacademy.pages.SearchPage;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.testng.Assert;

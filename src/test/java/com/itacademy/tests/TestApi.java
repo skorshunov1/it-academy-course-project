@@ -1,8 +1,8 @@
-package com.itacademy;
+package tests;
 
 import static io.restassured.RestAssured.given;
 
-import com.itacademy.utils.pages.listeners.TestListeners;
+import com.itacademy.listeners.TestListeners;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.testng.annotations.Listeners;
