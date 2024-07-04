@@ -1,4 +1,4 @@
-package com.itacademy.utils.pages.pages;
+package com.itacademy.pages;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
