@@ -1,6 +1,6 @@
-package com.itacademy.utils.pages.pages;
+package com.itacademy.pages;
 
-import com.itacademy.utils.pages.waiters.Waiters;
+import com.itacademy.waiters.Waiters;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.JavascriptExecutor;
