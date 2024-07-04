@@ -4,7 +4,7 @@
 
     <test name = "exampletest1">
         <classes>
-            <class name = "com.itacademy.TestOnSeleniumUi" />
+            <class name = "com.itacademy.tests.TestOnSeleniumUi" />
         </classes>
     </test>
 </suite>
