@@ -113,6 +113,7 @@ public class MainPage {
     }
 
     public String getTextWtRiSeT() {
+        Waiters.clickWebElement(getTextWtRiSe, driver);
         return getTextWtRiSe.getText();
     }
 
