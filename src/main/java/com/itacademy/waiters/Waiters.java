@@ -1,4 +1,4 @@
-package com.itacademy.utils.pages.waiters;
+package com.itacademy.waiters;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
