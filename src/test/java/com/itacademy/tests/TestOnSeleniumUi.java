@@ -16,7 +16,7 @@ public class TestOnSeleniumUi extends BaseTest {
 
 
     @Test
-    public void firstTest() throws InterruptedException {
+    public void firstTest() {
         MainPage mainPage = new MainPage(driver);
         mainPage.openUrl();
         mainPage.clickButtonCloseDialog();
@@ -25,7 +25,6 @@ public class TestOnSeleniumUi extends BaseTest {
         loginPage.typeLogin("st.korshunov88@gmail.com");
         loginPage.clickButtonContinue();
         loginPage.typeCodeInputField("564895");
-        Thread.sleep(10000);
         loginPage.clickButtonSubmit();
         String string = loginPage.getIsErrorPresent();
         Assert.assertEquals(loginPage.getIsErrorPresent(), "Sent to st.korshunov88@gmail.com");
