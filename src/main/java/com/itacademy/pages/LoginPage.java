@@ -55,7 +55,7 @@ public class LoginPage extends MainPage{
     }
 
     public void clickButtonSubmit() {
-        Waiters.clickWebElement(buttonSubmit, driver);
+       Waiters.waitElementClickable(buttonSubmit,driver);
         buttonSubmit.click();
     }
 
