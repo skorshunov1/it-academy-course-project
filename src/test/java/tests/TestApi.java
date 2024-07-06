@@ -1,4 +1,4 @@
-package com.itacademy.tests;
+package tests;
 
 import static io.restassured.RestAssured.given;
 
