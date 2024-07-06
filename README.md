@@ -4,20 +4,24 @@
 ## website: https://www.onliner.by/ - commercial resource of the Limited Liability Company "Onliner". APITest.
 
 ### Project structure:
-1.Main.Listeners (TestListeners) 
+1.src/main/java/com.itacademy
 
-2.Main.Pages(LoginPage,MainPage,ProductPage,SearchPage) 
+2.Listeners (TestListeners) 
 
-3.Main.Utils (ScreenshotUtils) 
+3.Pages(LoginPage,MainPage,ProductPage,SearchPage) 
 
-4.Main.Waiters (Waiters) 
+4.Utils (ScreenshotUtils) 
 
-5.Main.Resources(log4j2.properties) 
+5.Waiters (Waiters) 
 
-6.Test.TestNGExample(BaseTest,TestAPI,TestOnSeleniumUI) 
+5.Resources(log4j2.properties) 
 
-7.Test.Resources.Json(body.json) 
+6.src/test/java/com.itacademy
 
-8.Test.Resources.Testng(testngAPI.xml, testngUI.xml) 
+7.(TestNGExample(BaseTest,TestAPI,TestOnSeleniumUI) 
 
-9.Test.Resources. Allure.properties 
+8.Resources.Json(body.json) 
+
+9.Resources.Testng(testngAPI.xml, testngUI.xml) 
+
+10.Resources. Allure.properties 
