@@ -61,6 +61,7 @@ public class ProductPage extends MainPage {
     }
 
     public String getTextOneProductToBasket() {
+        Waiters.waitElementClickable(getTextproductRingSet, driver);
         return getTextproductRingSet.getText();
     }
 
