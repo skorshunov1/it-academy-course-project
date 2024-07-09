@@ -61,12 +61,12 @@ public class ProductPage extends MainPage {
     }
 
     public String getTextOneProductToBasket() {
-        Waiters.waitElementClickable(getTextproductRingSet, driver);
+        Waiters.clickWebElement(getTextproductRingSet, driver);
         return getTextproductRingSet.getText();
     }
 
     public void clickButtonDeleteProduct(){
-        Waiters.clickWebElement(deleteProduct, driver);
+        Waiters.visibileWebElement(deleteProduct, driver);
         deleteProduct.click();
     }
 
