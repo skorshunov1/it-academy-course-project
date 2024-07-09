@@ -19,7 +19,7 @@ public class Waiters {
         return element;
     }
     public static WebElement visibileWebElement(WebElement webElement,WebDriver driver) {
-        new WebDriverWait(driver, Duration.ofSeconds(10)).until(ExpectedConditions.visibilityOf(webElement));
+        new WebDriverWait(driver, Duration.ofSeconds(10)).until(ExpectedConditions.visibilityOfAllElements(webElement));
         return webElement;
     }
 
