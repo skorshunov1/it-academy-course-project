@@ -11,8 +11,8 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 
 
-public class TestOnSeleniumUi extends BaseTest {
-    private static final Logger LOGGER = LogManager.getLogger(TestOnSeleniumUi.class);
+public class TestUi extends BaseTest {
+    private static final Logger LOGGER = LogManager.getLogger(TestUi.class);
 
 
     @Test
