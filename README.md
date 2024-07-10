@@ -18,7 +18,7 @@
 
 6.src/test/java/com.itacademy
 
-7.(TestNGExample(BaseTest,TestAPI,TestOnSeleniumUI) 
+7.(TestNGExample(BaseTest,TestAPI,TestUI) 
 
 8.Resources.Json(body.json) 
 
