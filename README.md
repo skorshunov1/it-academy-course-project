@@ -6,22 +6,26 @@
 ### Project structure:
 1.src/main/java/com.itacademy
 
-2.Listeners (TestListeners) 
+2.listeners - TestListeners created for listeners with LOGGER
 
-3.Pages(LoginPage,MainPage,ProductPage,SearchPage) 
+3.pages - pages for web tests(LoginPage,MainPage,ProductPage,SearchPage) 
 
-4.Utils (ScreenshotUtils) 
+4.utils/ScreenshotUtils - for screenshots  
 
-5.Waiters (Waiters) 
+5.waiters - to use explicit waits
 
-5.Resources(log4j2.properties) 
+5.resources.log4j2.xml - configuration file for loggers
 
 6.src/test/java/com.itacademy
 
-7.(TestNGExample(BaseTest,TestAPI,TestUI) 
+7.tests.BaseTest - created for Before- and AfterMethod for UI tests
 
-8.Resources.Json(body.json) 
+8.TestAPI - created for API tests
+ 
+9.TestUI - created for UI tests
 
-9.Resources.Testng(testngAPI.xml, testngUI.xml) 
+10.resources.json -  to use parameters in API test
 
-10.Resources. Allure.properties 
+11.resources.testng - to create testngAPI.xml, testngUI.xml files tests separately
+
+12.resources.allure.properties - to use Allure report
