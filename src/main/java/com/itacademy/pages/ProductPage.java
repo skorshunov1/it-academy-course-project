@@ -38,7 +38,7 @@ public class ProductPage extends MainPage {
 
     public void scrollPage() {
         JavascriptExecutor js = (JavascriptExecutor) driver;
-        js.executeScript("window.scrollBy(0,950)");
+        js.executeScript("window.scrollBy(0,450)");
     }
 
     public void clickButtonEquipment() {
