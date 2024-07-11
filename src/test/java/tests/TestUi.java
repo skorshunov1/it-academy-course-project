@@ -2,9 +2,9 @@ package tests;
 
 import com.itacademy.pages.LoginPage;
 import com.itacademy.pages.MainPage;
-
 import com.itacademy.pages.ProductPage;
 import com.itacademy.pages.SearchPage;
+
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.testng.Assert;
@@ -15,7 +15,7 @@ public class TestUi extends BaseTest {
     private static final Logger LOGGER = LogManager.getLogger(TestUi.class);
 
 
-    @Test
+    @Test(retryAnalyzer = RetryTest.class)
     public void firstTest() {
         MainPage mainPage = new MainPage(driver);
         mainPage.openUrl();
