@@ -6,28 +6,28 @@
 ### Project structure:
 1. src/main/java/com.itacademy
 
-2. listeners - TestListeners created for listeners with LOGGER
+2. src/main/java/com.itacademy/listeners - TestListeners created for listeners with LOGGER
 
-3. pages - pages for web tests(LoginPage,MainPage,ProductPage,SearchPage) 
+3. src/main/java/com.itacademy/pages - pages for web tests(LoginPage,MainPage,ProductPage,SearchPage) 
 
-4. utils.ScreenshotUtils - for screenshots  
+4. src/main/java/com.itacademy/utils/ScreenshotUtils - for screenshots
 
-5. waiters - to use explicit waits
+5. src/main/java/com.itacademy/utils/RetryTest - runs again if the test fails the first time
 
-6. resources.log4j2.xml - configuration file for loggers
+6. src/main/java/com.itacademy/waiters/Waiters - to use explicit waits
 
-7. src/test/java/com.itacademy
+7. src/main/resources/log4j2.xml - configuration file for loggers
 
-8. com.itacademy.tests.BaseTest - created for Before- and AfterMethod for UI tests
+8. src/test/java/com.itacademy
 
-9. RetryTest - runs again if the test fails the first time
+9. src/test/java/com.itacademy/tests/BaseTest - created for Before- and AfterMethod for UI tests
 
-10. TestAPI - created for API tests
+10. src/test/java/com.itacademy/tests/TestAPI - created for API tests
  
-11. TestUI - created for UI tests
+11. src/test/java/com.itacademy/tests/TestUI - created for UI tests
 
-12. resources.json -  to use parameters in API test
+12. src/test/resources/json/body.json -  to use parameters in API test
 
-13. resources.testng - to create testngAPI.xml, testngUI.xml files tests separately
+13. src/test/resources/testng - to create testngAPI.xml, testngUI.xml files tests separately
 
-14. resources.allure.properties - to use Allure report
+14. src/test/resources/allure.properties - to use Allure report
