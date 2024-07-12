@@ -5,6 +5,7 @@ import com.itacademy.pages.MainPage;
 import com.itacademy.pages.ProductPage;
 import com.itacademy.pages.SearchPage;
 
+import com.itacademy.utils.RetryTest;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.testng.Assert;
