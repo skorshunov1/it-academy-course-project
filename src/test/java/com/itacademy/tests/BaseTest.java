@@ -1,4 +1,4 @@
-package tests;
+package com.itacademy;
 
 import com.itacademy.listeners.TestListeners;
 import org.openqa.selenium.WebDriver;

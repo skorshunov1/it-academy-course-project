@@ -1,4 +1,4 @@
-package tests;
+package com.itacademy;
 
 import org.testng.IRetryAnalyzer;
 import org.testng.ITestResult;

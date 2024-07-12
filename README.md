@@ -18,7 +18,7 @@
 
 7. src/test/java/com.itacademy
 
-8. tests.BaseTest - created for Before- and AfterMethod for UI tests
+8. com.itacademy.tests.BaseTest - created for Before- and AfterMethod for UI tests
 
 9. RetryTest - runs again if the test fails the first time
 

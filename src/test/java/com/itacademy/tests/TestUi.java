@@ -1,4 +1,4 @@
-package tests;
+package com.itacademy;
 
 import com.itacademy.pages.LoginPage;
 import com.itacademy.pages.MainPage;
