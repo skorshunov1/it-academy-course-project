@@ -31,3 +31,24 @@
 13. src/test/resources/testng - to create testngAPI.xml, testngUI.xml files tests separately
 
 14. src/test/resources/allure.properties - to use Allure report
+
+
+### Technologies used:
+1. Java 21 - programming language
+
+2. Apache Maven - framework for automating project assembly
+
+3. Selenium WebDriver - set of tools for automating web browsers
+
+4. TestNG - is a testing environment for the Java programming language
+
+5. Allure - framework for creating simple and understandable autotest reports
+
+6. RestAssured - Java library for testing REST API of web applications with JSON and XML
+
+7. Jenkins - is a server for automating development processes that allows you to integrate your code into a common repository, perform automatic builds, run tests and automatically deploy applications
+
+8. Git - distributed version control system
+
+
+
