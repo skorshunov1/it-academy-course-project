@@ -16,7 +16,7 @@ public class TestApi {
     private static final Logger LOGGER = LogManager.getLogger(TestApi.class);
 
 
-    @Test
+    @Test(priority = 1)
     public void postLoginRequest(){
         given().log().all()
                 .header("content-type", "application/json")
@@ -26,14 +26,14 @@ public class TestApi {
 
     }
 
-    @Test
+    @Test(priority = 2)
     public void getRequest() {
         given().log().all()
                 .when().get("https://catalog.onliner.by/sdapi/catalog.api/products/majorivbtblk?include=schema")
                 .then().log().all().statusCode(200);
     }
 
-    @Test
+    @Test(priority = 3)
     public void postRequest(){
        File file = new File("src/test/resources/json/body.json");
         given().log().all()
@@ -45,7 +45,7 @@ public class TestApi {
     }
 
 
-    @Test
+    @Test(priority = 4)
     public void deleteRequest(){
         given().log().all()
                 .header("Cookie", "stid=bf438997757c3170faa282ebf68d23c08a2a6ca16bea67f835dc8f31a17b111f")
